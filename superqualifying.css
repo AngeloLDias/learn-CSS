@@ -1,0 +1,19 @@
+/* direita para a esquerda
+Uma das coisas importantes para entender sobre como os navegadores lêem seus seletores CSS é que eles os lêem da direita para a esquerda . Isso significa que no seletor ul> li a [title = "home"] a primeira coisa que se interpreta é a [title = "home"] . Essa primeira parte também é chamada de "seletor de chave", pois, em última análise, é o elemento que está sendo selecionado.
+
+# ID's são os mais eficientes, o Universal é o menos
+Existem quatro tipos de seletores de chave: ID, classe, tag e universal. É a mesma ordem em quão eficientes elas são. */
+
+#main-navigation {   }      /* ID (Fastest) */
+body.home #page-wrap {   }  /* ID */
+.main-navigation {   }      /* Class */
+ul li a.current {   }       /* Class *
+ul {   }                    /* Tag */
+ul li a {  }                /* Tag */
+* {   }                     /* Universal (Slowest) */
+#content [title='home']     /* Universal */
+
+/* 
+Quando combinamos essa ideia da direita para a esquerda e a ideia do seletor de chaves, podemos ver que esse seletor não é muito eficiente: */
+
+#main-nav > li {   }  /* Slower than it might seem */

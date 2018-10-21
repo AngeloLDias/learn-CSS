@@ -1,0 +1,13 @@
+/* a) Estilos inline */
+/* b) IDs */
+/* b) Classes, peseudoclasses e atributos */
+/* c) Elementos e pseudoelemento */
+
+h1 /*0 0 0 1*/
+
+#content h1 /*0 1 0 1*/
+
+#sidebar ul li a .myclass:hover /*0 1 2 3*/
+
+/* Empate = Cascata do CSS: */
+/* !Important = Prioridade total! <=> CSS Usuário ganha*/
